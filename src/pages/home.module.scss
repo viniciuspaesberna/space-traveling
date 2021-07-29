@@ -1,1 +1,63 @@
-// TODO
+.postList{
+    article{
+        margin-bottom: 3rem;
+
+        strong{
+            font-size: 1.75rem;
+
+            transition-property: margin-left , font-size, color;
+            transition: .4s;
+        }
+
+        p{
+            margin-top: .5rem;    
+            
+            transition-property: margin-left , font-size, color;
+            transition: .5s;
+        }
+
+        & > div{
+            display: flex;
+            gap: 3rem;
+
+            margin-top: 1.8rem; 
+            
+            time{
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+
+                color: var(--info);
+            }
+            span{
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+
+                color: var(--info);
+            }
+        }
+
+        & + article{
+            margin-top: 2.5rem;
+        }
+
+        &:hover strong{
+            transform: translateX(5px);
+            font-size: 1.76rem;
+            color: var(--highlight);
+        }
+
+        &:hover p{
+            transform: translateX(10px);
+            font-size: 1rem;
+            color: var(--heading);
+        }
+    }
+}
+
+.loadMore{
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
